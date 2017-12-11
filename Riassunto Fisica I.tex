@@ -1,0 +1,404 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[a4paper, total={17cm , 27cm }]{geometry}
+\usepackage{amssymb}
+\author{Fabio Baldo}
+\title{%
+Riassunto \\
+\large Fisica I}
+\begin{document}
+
+\maketitle
+\part{Teoria commentata}
+\chapter{Elementi di matematica}
+	\subsection{Derivate parziali}
+	
+La derivata parziale si esprime con $\partial$ e rappresenta la derivata di più variabili rispetto a una sola.
+La derivata di una variabile che non sia quella presente nel differenziale parziale è uguale a zero.
+La derivata di una variabile presente nel differenziale parziale è la stessa cosa che effettuare una normalissima derivata.
+
+	\subsection{Nabla}
+Il simbolo nabla ha lo scopo di abbreviare e semplificare la scrittura delle derivate parziali.	
+	
+	\[ \nabla = \frac{\partial}{\partial x} ~\vec{i} + \frac{\partial}{\partial y} ~\vec{j} + \frac{\partial}{\partial z} ~\vec{k}  \] 
+
+	
+	
+	\subsection{Gradiente}
+
+Il gradiente di una funzione restituisce un vettore.
+Il gradiente può anche essere scritto come prodotto tra $\nabla $ e la funzione.
+
+		\subsubsection{In coordinate cartesiane} 
+
+		\[grad~f(x,y,z) = \frac{\partial f(x,y,z)}{\partial x} ~\vec{i} + \frac{\partial 	f(x,y,z)}{\partial y} ~\vec{j} + \frac{\partial f(x,y,z)}{\partial z} ~\vec{k} \]
+
+		\subsubsection{In coordinate polari}
+
+		\[grad~f(r,\theta,\varphi) = \frac{\partial f(r,\theta,\varphi)}{\partial r} ~\vec{\lambda} + \frac{1}{r}\frac{\partial f(r,\theta,\varphi)}{\partial \theta} ~\vec{\mu} + \frac{1}{r\sin(\theta)}\frac{\partial f(r,\theta,\varphi)}{ \partial \varphi} ~\vec{\nu} \]
+
+	\subsection{Divergenza}
+La divergenza di una funzione vettoriale restituisce uno scalare.
+
+		\subsubsection{In coordinate cartesiane} 
+		\[div(\vec{A}) =  \frac{\partial \vec{A}(x,y,z)}{\partial x} + \frac{\partial 	\vec{A}(x,y,z)}{\partial y} + \frac{\partial \vec{A}(x,y,z)}{\partial z} \]
+
+	%\subsubsection{In coordinate polari}
+		\subsubsection{Teorema della divergenza}
+Data una funzione vettoriale $\vec{A}(x,y,z)$ con derivate prime continue e $Vol$ il volume racchiuso allintero della superficie chiusa $S$, allora
+		\[\Phi=\oint_{S} \vec{A} \cdot \vec{n} dS = \int_{Vol} div(\vec{A})\,dVol\]
+	\subsection{Flusso di un vettore}
+Si definisce flusso di una funzione vettoriale $\vec{A}(x,y,z)$ attraverso la superficie $S$ secondo la seguente equazione
+		\[\Phi = \int_{S} \vec{A}(x,y,z) \cdot dS\]
+
+\chapter{Meccanica classica}
+	\subsection{Moto Rettilineo Uniforme }
+		\subsubsection{Equazione parametrica}
+		\begin{align*} 
+		\begin{cases} x(t)= x(t_{0})+v_{x}(t-t_{0})\\y(t)= y(t_{0})+v_{y}(t-t_{0})\\z(t)= z(t_{0})+v_{z}(t-t_{0}) \end{cases}
+		\end{align*}
+	
+	\subsection{Moto Uniformemente Accelerato}
+		\subsubsection{Equazione parametrica}
+	
+		\begin{align*} 
+		\begin{cases} x(t)= x(t_{0})+v_{x}(t-t_{0})+\frac{1}{2}a_{x}(t-t_{0})^{2}\\y(t)= y(t_{0})+v_{y}(t-t_{0})+\frac{1}{2}a_{y}(t-t_{0})^{2}\\z(t)= z(t_{0})+v_{z}(t-t_{0})+\frac{1}{2}a_{z}(t-t_{0})^{2} \end{cases}
+		\end{align*}
+	
+		\subsubsection{Equazine della velocità dipendente dalla posizione e indipendente dal tempo}
+		\begin{align*}
+		\begin{cases} v_{x}(t)^{2}-v_{x}(t_{0})^{2}=2a_{x}(x-x_{0}) \\ v_{y}(t)^{2}-v_{y}(t_{0})^{2}=2a_{y}(y-y_{0}) \\ v_{z}(t)^{2}-v_{z}(t_{0})^{2}=2a_{z}(z-z_{0})\end{cases}
+		\end{align*}
+
+	\subsection{Moto Armonico Semplice}
+Un Moto di un punto è periodico, quandoquesto descrive sempre la stessa traiettoria, passando per la stessa posizione, ad intervalli costanti di tempo, con la stessa velocità e la stessa accelerazione.
+		\subsubsection{Equazione differenziale del moto armonico}
+		
+		\[\ddot{x} + \omega^{2}x=0\]
+		\[x(t) = x_{0} + A\sin(\omega t +\phi) \]
+		
+La soluzione dell'equazione differenziale è definita con $x_{0}$ posizione che costituisce il centro di oscillazione; $A$ ampiezza del moto; $\omega t +\phi$ fase del moto; $\phi$ fase iniziale.
+
+	\subsection{Moto curvilineo}
+		\subsubsection{Componenti Polari Piane}
+			\paragraph{I versori}						
+			\[\vec{\lambda} = \cos\theta\vec{i} + \sin\theta\vec{j}\]
+			\[\vec{\mu} = \cos\theta\vec{i} - \sin\theta\vec{j}\]	
+			\paragraph{Le derrivate dei versori}		
+			\[\frac{d\vec{\lambda}}{dt}=\dot{\theta}\vec{\mu} \] 
+			\[\frac{d\vec{\mu}}{dt}=-\dot{\theta}\vec{\lambda}\]
+			\paragraph{Posizione}	
+			\[(P-O)=\vec{r}=r\vec{\lambda}\]
+			\paragraph{Velocità}	
+			\[\vec{v}=\dot{r}\vec{\lambda}+r\dot{\theta}\vec{\mu}\]
+			\paragraph{Accelerazione}
+				\[\vec{a}= (\ddot{r}-r\dot{\theta}^{2})\vec{\lambda}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\vec{\mu}\]
+		\subsubsection{Moto Circolare}	
+Essendo $\vec{r}$ costante, allora la sua derivata sarà nulla. Le formule precedentemente scritte si semplificano in:
+			\paragraph{Velocità}	
+			\[\vec{v}=r\dot{\theta}\vec{\mu}\]
+			\paragraph{Accelerazione}
+			\[\vec{a}= -r\dot{\theta}^{2}\vec{\lambda}+r\ddot{\theta}\vec{\mu}\]
+			\paragraph{Velocità angolare}
+			\[\vec{\omega}=\dot{\theta}\vec{k}\]
+			\paragraph{Accelerazione angolare}
+			\[\vec{\alpha}=\ddot{\theta}\vec{k}\]
+	\subsection{Moti relativi non relativistici}
+	Denotando con $\Omega$ l'origine del sistema relativo e P un generico punto nello spazio si ottiene che:
+		\paragraph{Velocità del punto P nel sistema di riferimento assoluto}	
+			\[\vec{v_{p}} = \vec{v_{p}^{r}} +\vec{v_{\Omega}}+\vec{\omega^{(t)}}\wedge(P-\Omega)\]
+		\paragraph{Accelerazione del punto P nel sistema di riferimento assoluto}
+		\[\vec{a_{p}} = \vec{a_{p}^{r}}+2\vec{\omega^{(t)}}\wedge\vec{v_{p}^{r}} + \frac{d\vec{\omega^{(t)}}}{dt} \wedge (P-\Omega) + \vec{\omega^{(t)}} \wedge [\vec{\omega^{(t)}} \wedge (P-\Omega)] \]
+		\[\vec{a_{p}} = \vec{a_{\Omega}} + \frac{d\vec{\omega^{(t)}}}{dt} \wedge (P-\Omega) + \vec{\omega^{(t)}} \wedge [\vec{\omega^{(t)}} \wedge (P-\Omega)] \]
+
+	\subsection{Componenti intrinseche}
+			\paragraph{Posizione}	
+			\[(P-O)= \vec{r} = \vec{r[s(t)]}\]
+			\paragraph{Velocità}	
+			\[\vec{v}=\dot{s}\vec{\tau}\]
+			\paragraph{Accelerazione}
+			\[\vec{a} = \ddot{s}\vec{\tau} + \frac{\dot{s}^{2}}{\rho} \vec{n} \]
+	\subsection{Forze}
+	\subsubsection{Forza peso}
+	\[\vec{p}=m\vec{g}\]
+	\subsubsection{Forza attrito}
+Esistono diversi tipi di attriti (statico, vinamico volvente). La formula è la medesima per tutti, ma i coefficienti sono diversi.
+	\[\vec{F_{a}}=f_{a}N\vec{\tau}\]
+	\subsubsection{Forza elastica}
+Se si pone l'origine del sistema di riferimento nel punto in cui la molla è legata al corpo quando questa è in equilibrio e si pone l'asse della molla come $asse~x$ del sistema, indipendentemente dal verso di quest'ultimo, la formula che fornisce la forza elastica è:
+	\[\vec{F}_{el}=-kx \vec{i} \]
+	\subsubsection{Forze conservative}
+Una forza si fice conservativa se il suo rotore è identicamente uguale a zero.
+		\paragraph{Teorema di Stokes}
+	Secondo la definizione una forza si dice conservativa se 
+			\[\oint\limits_{\gamma} \vec{F}\cdot d\vec{l}=0\]
+	Tuttavia secondo il teorema di Stokes la circuitazione di $\vec{F}$ su $\vec{dl}$ può anche essere scritta come
+			\[ \oint\limits_{\gamma} \vec{F}\cdot d\vec{l} = \int\limits_{S} Rot( \vec{F} )\cdot\vec{n}dS\] 
+In cui $S$ è la superficie regolare costruita sul contorno $\gamma$ 
+	Si deduce quindi che affinché la forza in oggetto sia conservativa questa deve soddisfare l'equazione
+			\[Rot(\vec{F})=0\]
+	\subsection{Momenti}
+		\subsubsection{Momento polare di una forza}
+Il significato fisico del momento polare di una forza è di rappresentare la capacità di una forza di poter produrre delle rotazioni.
+		\[\vec{M}_{o} = (P-O)\wedge\vec{F}=|P-O||\vec{F}|\sin\theta\vec{k}\]
+Nel caso del calcolo del momento polare di due forze è sufficiente sostituire la distanza $(P-O)$ con la distanza tra i due punti di applicazione delle forze.
+		\subsubsection{Momento assiale}
+Per calcolare il momento assiale di una forza si calcola facendo il prodotto eserno della componente della forza passante per il piano perpenicolare alla retta $a$ e passante per $P$
+		\[\vec{M}_{a} = (P-O)\wedge\vec{F}_{\perp}\]
+		\subsubsection{Momento polare della quantità di moto}
+		\[\vec{L}_{0}=(P-O)\wedge(m\vec{v})\]
+		\subsubsection{Momento assiale della quantità di moto}
+Per calcolare il momento assiale della quantità di moto si calcola facendo il prodotto eserno della componente della forza passante per il piano perpenicolare alla retta $a$ e passante per $P$
+		\[ \vec{L}_{0}=(P-O)\wedge(m\vec{v})_{\perp} \]
+		\subsubsection{Teorema del momento della quantità di moto}
+		\[\vec{M}_{o} = \frac{d\vec{L}_{0}}{dt} + \vec{v}_{0}\wedge(m\vec{v})\]
+Nel caso in cui il punto O non si muova il secondo membro si semplifica.
+		\subsubsection{Momento assiale della quantità di moto di un corpo che ruota attorno ad un asse}
+Nel caso in cui siano il sistema sia in componenti polari piane il momento si può anche riscrivere con 
+\[\vec{L}_{a}=mr^{2}\vec{\omega}\]
+	\subsection{Staticità}
+Affinché fi sia una condizione di equilibrio statico è necessario che:
+		\[\vec{R}= \sum\limits_{i=1}^N \vec{F}_{i}=0\]
+		\[\vec{M}_{o}= \sum\limits_{i=1}^N \vec{M}_{o\,i}=0 \]
+	\subsection{Dinamica}	
+Nel caso non siano verificate le condizioni di equilibrio si può applicare il secondo principio della dinamica
+		\[\vec{F}_{ris}= \sum\limits_{i=1}^N \vec{F}_{i} = m\vec{a}\]
+	\subsection{Oscillatore armonico}	
+Nel caso di un sistema comprendente una molla collegata ad un corpo puntiforme sul quale non agiscono forze di attrito è possibile scrivere l'equazine differenziale del moto, ovvero
+		\[\ddot{x}+\omega_{0}^{2}x=0\]
+In cui $\omega_{0}^{2}=\frac{k}{m}$ e la cui soluzione generale è
+		\[x(t)=A\sin(\omega_{0}t+\phi)\]
+Per ricavare i valori di $A$ e $\phi$ è necessario imporre le condizioni iniziali del problema.
+Il periodo delle oscillazioni libere è dato da 
+		\[T = \frac{2\pi}{\omega_{0}}= 2\pi\sqrt{\frac{m}{k}}\]
+	
+	\subsection{Lavoro di una forza}
+Si definisce come lavoro di una forza lungo la traiettoria $\gamma$
+		\[\textit{L}_{AB,\gamma}= \int_{A,\gamma}^B \vec{F}\cdot d\vec{l} \]
+		\subsubsection{Lavoro della forza elastica}
+		\[ \textit{L}_{AB,\gamma} = \int_{A,\gamma}^B \vec{F}_{el} \cdot d\vec{l}= \frac{1}{2} k x^{2}_{A} - \frac{1}{2} k x^{2}_{A} \]
+		\subsubsection{Lavoro della forza peso}
+		\[ \textit{L}_{AB,\gamma} = \int_{A,\gamma}^B \vec{F}_{el} \cdot d\vec{l}= mgz_{A}\]
+		\subsubsection{Lavoro della forza di attrito}
+Essendo la forza di attrito una forza \textbf{non} conservativa, allora
+		\[ \textit{L}_{AB,\gamma_{1}} \neq ~\textit{L}_{AB,\gamma_{2}}\]
+	\subsection{Energia}
+		\subsubsection{Energia cinetica}
+Un corpo dotato di massa che si muove con una certa velocità $ \vec{v} $ possiede un'energia cinetica data dall'equazione
+		\[ \textit{T} = \frac{1}{2} m \vec{v} \]
+		\subsubsection{Teorema dell'energia cinetica}
+Il lavoro compiuto da tutte le forze che agiscono su di un corpo per spostarlo d una posizine A ad una posizione B, lungo la triettoria $\gamma$, è pari alla differenza tra l'energia cinetica in B e l'energia cinetica in A, ovvero
+		\[\textit{L}_{AB,\gamma}= \int_{A,\gamma}^B \vec{F}\cdot d\vec{l}=T_{B}-T_{A} \]
+		\subsubsection{Energia Potenziale}
+Ad ogni forza conservativa che compie un lavoro è possibile associare una funzione scalare detta funzione energia potenziale, la quale è in relazione con la forza secondo la seguente equazione
+			\begin{align*}
+			\vec{F}\cdot d \vec{l} &= -dW  &  \vec{F} &= -grad(W)=-\nabla W
+			\end{align*}
+		
+Pertanto, è possibile calcolare il lavoro di un corpo come variazione della suaenergia potenziale. Tuttavia  quest'ultima è definita solamente a meno di una costante arbitraria. 
+Ad esempio, in generale si decide di associare il valore zero all'energia potenziale della forza peso di un corpo ad un'altezza nulla.
+			\paragraph{Energia potenziale della forza peso}
+			\begin{align*}
+			\vec{F}_{p} &= m\vec{g} & W(z)-W(z_{0}) &= mg(z-z_{0}) = mgh			
+			\end{align*}
+Ponendo l'energia potenziale $W(z_{0})=0$ allora l'equazione si semplifica ulteriormente e ci permette di ricavare l'energia potenziale di un corpo in dipendenza della sua sola altezza.
+			\paragraph{Energia potenziale della forza elastica}
+			\begin{align*}
+			\vec{F}_{el} &= -kx\vec{i} & W(x) &= \frac{1}{2}kx^{2} 	& \text{ponendo} ~~ W(0)&=0		
+			\end{align*}
+Ponendo $W(0)=0$
+		\subsubsection{Conservazione dell'energia}
+			\paragraph{Forze conservative}
+			\[\textit{L}_{AB,\gamma}= T(B)-T(A)= W(A)-W(B) \]
+			\paragraph{Forze non conservative}
+			\[\textit{L}^{nc}_{AB,\gamma}= \int_{A,\gamma}^B \vec{F}_{nc} \cdot d\vec{l} = [\,T(B)+W(B)\,]-[\,T(A)+W(A)\,]=E_{B}-E_{A} \]
+\chapter{Meccanica dei sistemi e dei corpi rigidi}
+	\subsection{Concetti base}
+		\subsubsection{Baricentro di un sistema}	
+Si definisce baricentro di un sistema $G(x_{G},y_{G},z_{G})$ un punto appartenente al sistema in cui si potrebbe idealmente applicare la risultante di tutte le forze peso del sistema e le sue coordinate sono date da
+		\begin{align*} 
+		 x_{G} &= \frac{1}{M} \frac{[\sum\limits_{i=1}^N x_{i} p_{i}]}{[\sum\limits_{i=1}^N p_{i}]}   &  y_{G} &= \frac{1}{M} \frac{[\sum\limits_{i=1}^N y_{i}p_{i}]}{[\sum\limits_{i=1}^N p_{i}]} & z_{G}&= \frac{1}{M} \frac{[\sum\limits_{i=1}^N z_{i}p_{i}]}{[\sum\limits_{i=1}^N p_{i}]} 
+		\end{align*}
+		
+		
+		\[ \frac{\vec{dF}}{denominatore}\]
+Nel caso in cui sia un sistema continuo
+		\begin{align*} 
+		x_{G} &= \frac{1}{M}\frac{\int_{p} xdp}{\int_{p} dp}   &  y_{G} &= \frac{1}{M}\frac{\int_{p} ydp}{\int_{p} dp} & z_{G} &=\frac{1}{M}\frac{\int_{p} zdp}{\int_{p} dp}
+		\end{align*}
+		\subsubsection{Centro di massa di un sistema}
+		Si definisce centro di massa di un sistema $C(x_{C},y_{C},z_{C})$ un punto appartenente al sistema in cui si potrebbe idealmente applicare la risultante di tutte le forze peso del sistema e le sue coordinate sono date da
+		\begin{align*} 
+		\begin{cases} x_{G} = \frac{1}{M} [\sum\limits_{i=1}^N x_{i}m_{i}]   \\ y_{G} = \frac{1}{M}[ \sum\limits_{i=1}^N y_{i}m_{i}] \\ z_{G}= \frac{1}{M}[\sum\limits_{i=1}^N z_{i}m_{i}] \end{cases}
+		\end{align*}
+Nel caso in cui sia un sistema continuo
+		\begin{align*} 
+		\begin{cases} x_{G}=\frac{1}{M} \int_{M} xdm   \\ y_{G}= \frac{1}{M}\int_{M} ydm \\ z_{G}= \frac{1}{M}\int_{M} zdm \end{cases}
+		\end{align*}
+
+Nel caso di sistemi in cui $\vec{g}$ sia costante, allora baricentro e centro di massa coincidono
+		\subsubsection{Moto del centro di massa}
+La quantità di moto totale di un sistema di corpi puntiformi è uguale alla quantità di moto del centro di massa, come se in esso fosse concentrata tutta la massa.
+			\[\vec{p}_{tot} = M\vec{v}_{C}\]
+		\subsubsection{Momento di Inerzia polare e assiale}
+			\paragraph{Sistema di corpi puntiformi}
+			\[I=\sum\limits_{i=1}^N m_{i}r_{i}^{2}\]
+			\paragraph{Corpo rigido}
+			\[I=\int\limits_{M} r^{2}dm\]
+		\subsubsection{Momento assiale totale della quantità di moto}
+			\paragraph{Sistema di corpi puntiformi}
+			\[\vec{L}_{a}=[\sum\limits_{i=1}^N m_{i}r_{i}^{2}]\vec{\omega}=I_{a}\vec{\omega}\]
+			\paragraph{Corpo rigido}
+			\[I=(\int\limits_{M} r^{2}dm)\vec{\omega}=I_{a}\vec{\omega}\]
+	\subsection{Prima equazione cardinale della meccanica}
+			\[\vec{F}_{e}=\frac{d\vec{p}_{tot}}{dt}=M\vec{a}_{C}\]
+Questa formula è una sorta di estensione del secondo principio della dinamica.
+	\subsection{Seconda equazione cardinale della meccanica}
+			\[ \vec{M}_{eO} = \frac{d \vec{L}_{O}}{dt} + \vec{v}_{O} \cdot \vec{p}_{C}\]
+Questa formula è una sorta di estensione del teorema della quantità di moto.
+	\subsection{Teorema dell'energia cinetica applicato ai sistemi}
+				
+		\[ \int_{A_{i},\gamma_{i}}^{B_{i}} \vec{F}_{i} \cdot d \vec{l}_{i} + \int_{A_{i},\gamma_{i}}^{B_{i}} \vec{f}_{i} \cdot d\vec{l}_{i} = T_{Bi}-T_{Ai} \]
+		
+		\[L_{e,A \rightarrow B} + L_{i,A \rightarrow B} = T_{B}- T_{A}\]		
+				
+Nell'analisi dei sistemi di corpi puntiformi è necessario tenere in conto anche delle forze interne al sistema.
+	\subsection{Energia cinetica di un solido che ruoto intorno ad un asse}
+	\[T = \frac{1}{2}(\int_{M} r^{2}dm)\vec{\omega^{2}} = \frac{1}{2} I_{a} \vec{\omega}^{2}\]
+	\subsection{Teorema di Konig}
+Per semplificare i calcoli si immagina di utilizzare un secondo sistema di riferimento cartesiano ortogonale che ha per origine il centro di massa del sistema $C$. Se il sistema di riferimento solidale con il corpo in movimento si muove solamente di moto traslatorio rispetto al sistema di riferimento assoluto allora si può dire che il valore dell'energia cinetica del corpo in oggetto è data dalla relazione
+	\[T=T_{c} + \frac{1}{2}M\vec{v}_{C}^{2}\]
+in cui $T_{C}$ è l'energia cinetica totale rispetto al sistema di riferimento con origine $C$ e con $\frac{1}{2}M\vec{v}\,^{2}_{C}$ l'energia cinetica del centro di massa, ovvero del sistema di riferimento stesso. 
+	\subsection{Teorema di huygens-Steiner}
+Per seplificare il calcolo del momento d'inerzia assiale si può ricorrere all'utilizzo della relazione 
+		\[I_{a}=I_{C}+Md^{2}\]
+che lega il momento d'inerzia rispetto ad un generico asse al momento d'inerzia calcolato rispetto ad un asse parallelo a quello in oggetto, ma passante per il centro di massa e la distanza $d$ tra i due assi.
+	
+\chapter{Meccanica dei fluidi}
+	\subsection{Portata areica}
+Questa grandezza rappresenta il volume $dV$ che attraversa la superficie $S$ nel tempo $dt$
+		\[\dot{V}=\int_{S} \vec{v}\cdot \vec{n}\,dS\]
+	\subsection{Portata massica}
+Questa grandezza rappresenta la massa $dm$ che attraversa la superficie $S$ nel tempo $dt$
+		\[\dot{m}=\int_{S} \rho \, \vec{v}\cdot \vec{n}\,dS\]
+	\subsection{Equazione di continuità per la massa}
+Questa equazione permette di la quantità di massa $M$ presente all'istante $dt$ allinterno della superficie chiusa. Nel caso non siano presenti sorgenti o pozzi il termine $\int_{V} \textbf{S}\,dV$ si annulla.
+		\[\frac{dM}{dt} = -\oint_{S} \rho \, \vec{v}\cdot \vec{n}\,dS + \int_{V} \textbf{S}\,dV\]
+	\subsection{Legge di Stevino}
+		\[p(z)=p(z_{0})-\rho g(z-z_{0})\]
+	\subsection{Principio di Archimede}
+		\[\vec{g} M_{liquido} + \vec{g}M_{corpo} = m\vec{a}=\vec{F}_{spinta}\]
+	\subsection{Equazione di Bernoulli}
+Condizioni affinché l'equazione sia valida
+\begin{itemize}
+\item Il fluido è perfetto, cioè $\eta=0$ e $\rho=0$;
+\item Il moto è stazionario, ovvero non c'è dipendenza diretta dal tempo nelle grandezze fisiche coinvolte;
+\item Non ci sono né pozzi né sorgenti;
+\item $g \simeq cost$ 
+\item $Rot(\vec{v})=0$
+\end{itemize}
+		\[z+\frac{p}{\rho g} + \frac{v^{2}}{2g}= ~cost.\]
+\chapter{Cenni di gravitazione}
+	\subsection{Legge della gravitazione universale}
+La forza gravitazionale è una forza che agisce tra due corpi dotati di massa, è solamente attrattiva ed è radiale.
+		\[\vec{F	} = -G ~\frac{m_{1}m_{2}}{r^{2}} ~\vec{u}_{r}\]
+Se le due masse non sono puntiformi è necessarion rivedere l'equazione, ovvero
+		\[\vec{F	} = -G ~\int_{m_{1}} dm_{1} \int_{m_{2}} \frac{dm_{2}}{r^{2}}\]
+	\subsection{Energia potenziale gravitazionale}
+Essendo la forza di gravità una forza conservativa, ovvero
+		\[Rot(\vec{F_{g}})\equiv 0\]
+Allora si può definire una funzione detta energia potenziale gravitazionale che è legata alla forza secondo le relazioni
+	\begin{align*}
+		\vec{F}_{g} \cdot d\vec{l} &= -dW  & \vec{F}_{g} &= - \nabla W
+	\end{align*}
+Ponendo poi l'energia potenziale gravtazionale uguale a zero per un $r \rightarrow \infty $ risulta
+		\[W(r)=-G~\frac{m_{1}m_{2}}{r}\] 
+		\subsubsection{Più di due masse}
+Nel caso di più masse, l'energia potenziale gravitazinale si calcola facendo la somma delle energie potenziali delle masse prese due a due una sola volta.
+	\subsection{Campo gravitazionale}
+Per comodità si può considerare il campo gravitazionale,ovvero una regione di spazio in cui sia definita la forza gravitazionale secondo la relazione 
+	\[\vec{H}= \frac{\vec{F}}{m}\]
+	\subsection{Potenziale del campo gravitazionale}
+Essendo il campo gravitazionale conservativo, ovvero
+		\[Rot(\vec{H})\equiv 0\]
+Allora si può definire una funzione detta potenziale gravitazionale che è legata alla forza secondo le relazioni
+		\[\vec{H} \cdot d\vec{l} = -dV \]
+Ponendo poi l'energia potenziale gravtazionale uguale a zero per un $r \rightarrow \infty $ risulta
+		\[V(r) =-G ~ \frac{m}{r} \] 
+\chapter{Elettrostatica nel vuoto}
+	\subsection{Forza di Coulomb}
+La forza coulombiana può essere sia attrattiva che repulsiva, ma è sempre radiale.
+	\[\vec{F_{el}}= \frac{1}{4\pi\varepsilon_{0}}\]
+	\subsection{Energia potenziale elettrostatica}
+Essendo la forza di  una forza conservativa, ovvero
+		\[Rot(\vec{F_{ele}})\equiv 0\]
+Allora si può definire una funzione detta energia potenziale gravitazionale che è legata alla forza secondo le relazioni
+	\begin{align*}
+		\vec{F}_{ele} \cdot d\vec{l} &= -dW  & \vec{F}_{ele} &= - \nabla W
+	\end{align*}
+Ponendo poi l'energia potenziale gravtazionale uguale a zero per un $r \rightarrow \infty $ risulta
+		\[W(r)=-\frac{1}{4 \pi \varepsilon_{0}}~\frac{q_{1}q_{2}}{r}\] 
+		\subsubsection{Più di due cariche}
+Nel caso in cui siano presenti più di due cariche l'energia potenziale totale è data dalla somma delle energie potenziali delle cariche prese a due a due una sola volta.
+
+		\subsection{Campo elettrico}
+Per comodità si può considerare il campo elettrostatico, ovvero una regione di spazio in cui sia definita la forza coulombiana secondo la relazione 
+	\[\vec{E}= \frac{\vec{F}_{ele}}{q}\]
+		\subsubsection{Campo elettrico generato da una carica volumica}
+Ponendo $\rho = \frac{dq}{dV}$ la densità volumica di carica, allora risulta che
+		\[ \vec{E} = \frac{1}{4 \pi \varepsilon_{0}} \int_{Q} \frac{dq}{r^{2}} ~\vec{u}_{r}=\frac{1}{4 \pi \varepsilon_{0}} \int_{V} \frac{\rho \, dV}{r^{2}} ~\vec{u}_{r}\]
+		\subsubsection{Campo elettrico generato da una carica superficiale}
+Ponendo $\sigma = \frac{dq}{dS}$ la densità superficiale di carica, allora risulta che
+		\[ \vec{E} = \frac{1}{4 \pi \varepsilon_{0}} \int_{Q} \frac{dq}{r^{2}} ~\vec{u}_{r}=\frac{1}{4 \pi \varepsilon_{0}} \int_{S} \frac{\sigma dS}{r^{2}} ~\vec{u}_{r} \]
+		\subsubsection{Campo elettrico generato da una carica filiforme}
+Ponendo $\lambda = \frac{dq}{dl}$ la densità lineare di carica, allora risulta che
+		\[ \vec{E} = \frac{1}{4 \pi \varepsilon_{0}} \int_{Q} \frac{dq}{r^{2}} ~\vec{u}_{r}=\frac{1}{4 \pi \varepsilon_{0}} \int_{L} \frac{\lambda dl}{r^{2}} ~\vec{u}_{r} \]
+		\subsubsection{Campo elettrico generato da un filo rettilineo indefinito uniformemente carico}
+Ponendo $\lambda = \frac{dq}{dl}=cost.$ la densità lineare di carica, un sistema di riferimento cartesiano ortogonale con $x$ l'asse che coincde con il filo, allora
+		\[ \vec{E} = \frac{\lambda}{2 \pi \varepsilon_{0} R} ~ \vec{u}_{r} \]
+		\subsubsection{Campo elettrico sull'asse di una spira circolare uniformemente carica}
+Ponendo $\lambda = \frac{Q}{2 \pi R}= cost.$ la densità lineare di carica, un sistema di riferimento cartesiano ortogonale con $x$ l'asse che coincde con la retta passante per il centro della spira e a quest'ultima ortogonale, allora
+		\[ \vec{E} = \frac{1}{4 \pi \varepsilon_{0}}\, \frac{Qx}{(x^{2}+R^{2})^{\frac{3}{2}}} ~ \vec{u}_{r} \]
+	\subsection{Legge di Gauss del campo elettrico}
+		\subsubsection{Forma integrale}
+			\[\Phi_{ele}=\oint_{S} \vec{E} \cdot \vec{n} dS = \frac{Q_{tot}}{\varepsilon_{0}}\]
+		\subsubsection{Forma differenziale}
+			\[div(\vec{E}) = \frac{\rho(x,y,z)}{\varepsilon_{0}}\]
+	\subsection{Potenziale del campo elettrico}
+Essendo la forza coulombiana una forza conservativa come anche il campo elettrico, allora, per comodità è possibile definire una funzione potenziale del campo elettrico o semplicemente potenziale elettrico.
+	\begin{align*}
+		\vec{E} \cdot d\vec{l} &= -dV  & \int_{A}^{B} \vec{E} \cdot d\vec{l} &= V(A) - V(B) 
+	\end{align*}
+		\subsubsection{Potenziale elettrico di una carica puntiforme}
+		\[\int_{A,\gamma}^B \vec{E} \cdot d\vec{l} = -\int_{V(A)}^{V(B)} dV \]
+Ponendo poi il potenziale elettrico uguale a zero per un $r \rightarrow \infty $ risulta
+		\[V(r)=\frac{1}{4 \pi \varepsilon_{0}}~\frac{q}{r}\]
+		\subsubsection{Potenziale elettrico di una carica lineare}
+Ponendo $\lambda = \frac{dq}{dl}$ la densità lineare di carica, allora risulta che
+		\[V(r)=\frac{1}{4 \pi \varepsilon_{0}} \int_{Q}\frac{dq}{r} = \frac{1}{4 \pi \varepsilon_{0}}\int_{L} \frac{\lambda dl}{r}\]		
+		\subsubsection{Potenziale elettrico di una carica superficiale}
+Ponendo $\sigma = \frac{dq}{dS}$ la densità superficiale di carica, allora risulta che
+		\[V(r)=\frac{1}{4 \pi \varepsilon_{0}} \int_{Q}\frac{dq}{r} = \frac{1}{4 \pi \varepsilon_{0}}\int_{V} \frac{\rho dV}{r}\]	
+		\subsubsection{Potenziale elettrico di una carica volumica}
+Ponendo $\rho = \frac{dq}{dV}$ la densità volumica di carica, allora risulta che
+		\[V(r)=\frac{1}{4 \pi \varepsilon_{0}} \int_{Q}\frac{dq}{r} = \frac{1}{4 \pi \varepsilon_{0}}\int_{S} \frac{\sigma dS}{r}\]
+		
+	\subsection{Relazione tra l'energia potenziale e il potenziale}
+Essendo
+	\begin{align*}
+		\vec{F}_{ele} \cdot d\vec{l} &= -dW  & q\vec{E} \cdot d\vec{l} &= -dW & \vec{E} \cdot d\vec{l} &= -dV 
+	\end{align*}
+Allora, 
+		\[dW=q\,dV\]
+%\chapter{Termodinamica}
+%\part{Metodologie di risoluzione degli esercizi}
+	%\chapter{Meccanica classica}
+	%\chapter{Meccanica dei sistemi e dei corpi rigidi}
+	%\chapter{Meccanica dei fluidi}
+	%\chapter{Cenni di gravitazione}
+	%\chapter{Elettrostatica nel vuoto}
+	%\chapter{Termodinamica}
+\end{document}
